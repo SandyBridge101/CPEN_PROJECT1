@@ -1,0 +1,183 @@
+
+
+body{
+    height: 100%;
+     background: linear-gradient(
+        
+     white 0%,
+        white 15%,
+        #28477d 15%,
+        #28477d 100%
+    );
+font-family: Arial, sans-serif;
+justify-content: center;
+align-items: center;
+
+}
+.container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    
+  }
+  img {
+    max-width: 100%
+  }
+  .image {
+    flex-basis: 8%
+  }
+  .text {
+    font-size: 30px;
+    padding-left: 2px;
+  }
+
+
+.wrapper{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-size: large;
+}
+
+.registration_form{
+	background: #052b6b;
+	padding: 25px;
+	border-radius: 5px;
+	width: 400px;
+}
+
+.registration_form .title{
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	color:burlywood;
+	letter-spacing: 5px;
+	font-weight: 700;
+}
+
+.form_wrap{
+	margin-top: 35px;
+}
+
+.form_wrap .input_wrap{
+	margin-bottom: 15px;
+}
+
+.form_wrap .input_wrap:last-child{
+	margin-bottom: 0;
+}
+
+.form_wrap .input_wrap label{
+	display: block;
+	margin-bottom: 3px;
+	color: burlywood;
+}
+
+.form_wrap .input_grp{
+	display: flex;
+	justify-content: space-between;
+}
+
+.form_wrap .input_grp  input[type="text"]{
+	width: 165px;
+}
+
+.form_wrap  input[type="text"]{
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #000000;
+	padding: 10px;
+	outline: none;
+}
+
+.form_wrap  input[type="text"]:focus{
+	border-color: #000000;
+}
+
+.form_wrap  input[type="password"]{
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #000000;
+	padding: 10px;
+	outline: none;
+}
+
+.form_wrap  input[type="password"]:focus{
+	border-color: #000000;
+}
+
+.form_wrap ul{
+	background: #fff;
+	padding: 8px 10px;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+}
+
+.form_wrap ul li:first-child{
+	margin-right: 15px;
+}
+
+.form_wrap ul .radio_wrap{
+	position: relative;
+	margin-bottom: 0;
+}
+
+.form_wrap ul .radio_wrap .input_radio{
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+}
+
+.form_wrap ul .radio_wrap span{
+	display: inline-block;
+	font-size: 14px;
+	padding: 3px 20px;
+	border-radius: 3px;
+	color: #000000;
+}
+
+.form_wrap .input_radio:checked ~ span{
+	background: #6a7fa3;
+}
+
+.form_wrap .submit_btn{
+	width: 100%;
+	background: #1f59be;
+	padding: 10px;
+	border: 0;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	cursor: pointer;
+	color: burlywood;
+}
+
+.form_wrap .submit_btn:hover{
+	background: #005cfa;
+}
+
+a:link, a:visited {
+    background-color: green;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: solid green;
+
+  }
+
+  .register{
+      color: burlywood;
+display: block;
+margin: 20px auto;
+width: 20%;
+
+
+  }

@@ -1,0 +1,88 @@
+{%extends './partials/base.html'%}
+{%block title%}
+        landing page
+{%endblock%}
+
+{%block content%}
+<html>
+<style>
+    body{
+    height: 100vh;
+     background: linear-gradient(
+        
+     white 0%,
+        white 15vh,
+        #28477d 15vh,
+        #28477d 100vh
+    );
+font-family: 'Work Sans', sans-serif;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+
+}
+b{
+font-size: 500%;
+color: burlywood;
+
+
+}
+.container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    
+  }
+
+  .color
+  {
+    color: #D1AB66;
+  }
+  
+  .image {
+    flex-basis: 8%;
+    position:relative;left:-2px;top:-10px;
+    max-width: 70px;
+  }
+  .text {
+    font-size: 15pt;
+    padding-left: 4px;
+    position:relative;left:-2px;top:-24px;
+    padding: 10px;
+  }
+
+  h2
+  {
+    color: #D1AB66;
+  }
+
+button:link, button:visited {
+    background-color: #1059cf;
+    color: rgb(255, 198, 9);
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius:6px ;
+  }
+  
+  button:hover, button:active {
+    background-color: rgb(198, 160, 33);
+    color: #0062ff;
+    
+  }
+</style>
+<body>
+    <b>WELCOME</b>
+
+    <h2><p><strong>Read your project reports here</strong></p></h2>
+  
+    <h2><p>UGSPACE provides easier means of reading project reports</p></h2>
+    <div class="register">
+  <button class="btn btn-light"><a href="{% url 'register' %}">Register</a></button>
+  <button class="btn btn-light"><a href="{% url 'login' %}">Log In</a></button>
+    </div>
+</body>
+</html>
+{%endblock%}

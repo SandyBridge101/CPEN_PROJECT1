@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <nav>
+        <h1>UGSPACE</h1>
+        <strong>{{ file.projectname }}</strong>
+    </nav>
+    <div>
+        
+        <iframe src="https://drive.google.com/file/d/1GAOahdk_4F7-icVaYYyoOgG6qMm6L1x3/preview" width="100%" height="500px"></iframe>
+
+    </div>
+    <div>
+        {%for project in file %}
+        <p>{{project.projectname}}</p>
+        
+        
+        <iframe src="{{project.projectfile.url}}" width="500" height="500" ></iframe>
+
+        {%endfor%}
+    </div>
+</body>
+</html>

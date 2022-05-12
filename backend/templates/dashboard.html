@@ -1,0 +1,230 @@
+{%extends './partials/base.html'%}
+{%block title%}
+    Home
+{%endblock%}
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<script>
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+</script>
+<style>
+
+    body{
+    height: 100vh;
+     background: linear-gradient(
+        
+     rgb(204, 204, 204) 0vh,
+     rgb(204, 204, 204) 15vh,
+        #ffffff 15vh,
+        #ffffff 100vh
+    );
+font-family: Arial, sans-serif;
+font-family: 'Work Sans', sans-serif;
+}
+
+.background
+{
+  background-color: darkgray;
+}
+
+.font
+{
+    color: #D1AB66;
+    font-weight: 100;
+}
+
+.container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-size-adjust: auto;
+    
+  }
+    .image {
+    flex-basis: 8%;
+    position:relative;left:-2px;top:-10px;
+    max-width: 70px;
+  }
+  .text {
+    font-size: 15pt;
+    padding-left: 4px;
+    position:relative;left:-2px;top:-24px;
+    padding: 10px;
+  }
+
+  button{
+    width: 200px;
+    border: none;
+    background : rgb(181, 140, 51);
+    color: white;
+    border-radius: 6px;
+    padding: 15px 32px;
+    position:relative;left:0px;top:24px;
+}
+
+
+.dash_btn:link, .dash_btn:visited {
+    background-color: #3665f4;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius:6px ;
+  } 
+  
+  
+  .dash_btn:hover, .dash_btn:active {
+    background-color:#3665f4;
+    color: rgb(181, 140, 51);
+
+  }
+
+    .dash_btn:hover, .dash_btn:active {
+    background-color:#3665f4;
+    color: rgb(181, 140, 51);
+
+  }
+
+  
+  .close_btn:hover, .close_btn:active {
+    background-color:#3665f4;
+    color: rgb(181, 140, 51)
+
+  }
+
+  .close_btn:link, .close_btn:visited {
+    background-color: #3665f4;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius:6px ;
+  }
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(12, 46, 169); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  .sidenav h2 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(181, 140, 51);
+    display: block;
+    transition: 0.3s;
+  }
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: rgb(181, 140, 51);
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+</style>
+
+
+<body>
+    
+<div class="background">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <h2>DASHBOARD</h2>
+    <a href="{%url 'open-file'%}">See your projects</a>
+    <a href="{%url 'logout'%}">Log out</a>a>
+
+  </div>
+  <button class="dash_btn" onclick="openNav()">Menu</button>
+  <div class="container-fluid flex-grow-1  mx-lg-2 my-lg-5">
+    <div class="row">
+        <div class="col-4"></div>
+        <a class="col-4 text-center bg-dark py-lg-5" href="{%url 'open-file'%}">
+            <p class="h4 text-light">View projects</p>
+        </a>
+        <div class="col-4"></div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-4"></div>
+    <a class="col-4 text-center bg-primary py-lg-5" href="{%url 'logout'%}">
+        <p class=" h4 text-light">Logout</p>
+    </a>
+    <div class="col-4"></div>
+</div>
+
+
+  
+  {%include './partials/stats.html'%}
+  
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<!-- Use any element to open the sidenav -->
+
+</div>
+</div>
+
+</body>
+<footer class="text-center py-4" style="color:grey;background-color:white;">
+  UgSpace 2022
+</footer>
+
+
+
+{%endblock%}
+
+

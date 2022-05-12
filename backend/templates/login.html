@@ -1,0 +1,168 @@
+{%extends './partials/base.html'%}
+{%block title%}
+        Home
+{%endblock%}
+
+{%block content%}
+
+<style>
+
+body{
+    height: 100vh;
+     background: linear-gradient(
+     white 0%,
+    white 15vh,
+        #28477d 15vh,
+        #28477d 100vh
+    );
+font-family: 'Work Sans', sans-serif;
+justify-content: center;
+align-items: center;
+
+}
+
+h1{
+text-align: center;
+font-size: 50px;
+color: burlywood;
+font-family: 'Work Sans', sans-serif;
+}
+
+form{
+margin: 20px auto;
+width: 40%;
+color: burlywood;
+}
+
+input{
+padding: 10px;
+font-size: inherit;
+}
+
+input[type="text"]{
+display: block;
+margin-bottom: 25px;
+width: 100%;
+border:2px solid burlywood;
+border-radius: 6px;
+
+
+}
+input[type="password"]{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border:2px solid burlywood;
+    border-radius: 6px;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+  }
+  input[type=password]:focus {
+    background-color: lightblue;
+  }
+
+input[type=submit]{
+width: 40%;
+border: none;
+background : rgb(51, 127, 174);
+color: white;
+margin-bottom: 25px;
+border-radius: 6px;
+
+  }
+  input[type=submit]:focus{
+    width: 40%;
+    border: solid #337fae;
+    background: white;
+    color: #337fae;
+  }
+
+    button{
+        width: 40%;
+        border: solid #337fae;
+        background: white;
+        color: #337fae;
+        border-radius: 6px;
+}
+
+button{
+    width: 40%;
+    border: none;
+    background : rgb(10, 73, 182);
+    color: white;
+    align-content: center;
+    border-radius: 6px;
+}
+    
+.container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    
+  }
+  
+  .image {
+    flex-basis: 8%;
+    position:relative;left:-2px;top:-10px;
+    max-width: 70px;
+  }
+  .text {
+    font-size: 15pt;
+    padding-left: 4px;
+    position:relative;left:-2px;top:-24px;
+    padding: 10px;
+  }
+
+/* REGISTER BUTTON */
+  a:link, a:visited {
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius:6px ;
+  }
+  
+  .register a:hover, .register a:active {
+    background-color: #D1AB66;
+
+  }
+
+.register{
+color: white;
+display: block;
+margin: 20px auto;
+width: 20%;
+
+
+  }
+</style>
+
+<body>
+<link rel="stylesheet"  href="styles.css">
+    <h1>LOGIN</h1>
+    <div>
+        <form method = "POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            username
+            <br/>
+            <input type="text" name="username" />
+            <br/>
+            Password:
+            <br/>
+            <input type="password" name="password" />
+            <br/>
+            <input class ="btn btn-primary" type="submit" value= "Login" />
+            <br/>
+        </form>
+    </div>
+
+
+</form>
+<div class="register">
+    <p>Not a member? <a href="{% url 'register' %}">Register</a></p>
+</div>
+</body>
+{%endblock%}

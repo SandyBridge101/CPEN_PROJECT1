@@ -1,0 +1,54 @@
+{%extends './partials/base.html'%}
+{%block title%}
+    Home
+{%endblock%}
+
+{%block content%}
+<style>
+    body
+    {
+        background-color: #133E6F;
+    }
+    iframe
+    {
+        border: 30px black ;
+        border-radius: 25px;
+    }
+    h3
+    {
+        color: #D1AB66;
+    }
+    .check
+    {
+        background-color: green
+    }
+    .project
+    {
+        border-style: solid;
+        border-radius: 20px;
+
+    }
+    .project-name
+    {
+        color: beige;
+    }
+</style>
+
+<body>
+
+    <div class="container-fluid border-2">
+        <div class="row">
+            {%for project in file %}
+            <div class="col-sm-5 project my-2 mx-2 py-2" style="border-radius:20;border-color: #D1AB66;">
+                <div class="row">
+                    <div class="col-6"><p><h3><p>Project: <p class="project-name">{{project.projectname}}</p></p></h3></p></div>
+                    <div class="col-6"><p><h3><p>Course master: <p class="project-name">{{project.lecturer}}</p></p></h3></p></div>
+                    <p><small><p style="color: #D1AB66;">Date uploaded: <p class="project-name" style="color:white;">{{project.date}}</p></p></small></p>
+                    <div class="col-3"><a class="btn btn-light btn-outline-dark" href="{{project.projectfile.url}}">Open file</a></div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+{%endblock%}

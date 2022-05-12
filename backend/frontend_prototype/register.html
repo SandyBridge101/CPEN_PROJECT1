@@ -1,0 +1,18 @@
+{%extends './partials/base.html'%}
+{%block title%}
+        Home
+{%endblock%}
+
+{%block content%}
+<body>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+    
+        {{form.as_p}}
+        <button type="submit">Register</button>
+    </form>
+    <a href="{% url 'login' %}" target="_blank">Login</a>
+</body>
+</html>
+{%endblock%}
